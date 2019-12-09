@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="col-9 side-wrapper">
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+          <a class="portfolio-link" href="{{ post.url | relative_url }}">
+            <div class="">
+              <img src="/assets/img/{{ post§.cover | downcase }}" alt="" class="portfolio-cover-img">
+            </div>
+
+            <div class="portfolio-link-info">
+              <span class="heading-2">@{{ post.company | downcase }}</span>
+              <h3 class="heading-2">{{ post.title | escape }}</h3>
+              <p>{{ post.lead | escape }}</p>
+            </div>
+          </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+
+  {%- endif -%}
+
+</div>

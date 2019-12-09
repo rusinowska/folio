@@ -1,0 +1,36 @@
+<header class="header">
+  <div class="container">
+
+
+    <div class="col-12-sm col-3">
+      <div class="title-nav">
+        {%- assign default_paths = site.pages | sort:"order" | map: "path" -%}
+        {%- assign page_paths = site.header_pages | default: default_paths -%}
+        <a class="title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+        <button class="toggle-menu">
+          <span></span>
+        </button>
+      </div>
+      {%- if page_paths -%}
+      <div id="menu" class="">
+        <nav class="main-nav">
+          <ul>
+            {%- for path in page_paths -%}
+              {%- assign my_page = site.pages | where: "path", path | first -%}
+              {%- if my_page.title -%}
+              <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+              {%- endif -%}
+            {%- endfor -%}
+            <li>
+              <a href="{{ site.cv_link }}" target="_blank" class="download-cv-button hide-desktop">
+                download cv
+                <i class="material-icons">vertical_align_bottom</i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      {%- endif -%}
+    </div>
+  </div>
+</header>

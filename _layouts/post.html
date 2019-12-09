@@ -1,0 +1,54 @@
+---
+layout: default
+---
+<div class="col-8 side-wrapper">
+  <article class="project">
+
+    <header class="row project-header">
+      <div class="col-12-sm col-6 ">
+        {%- if page.cover -%}
+          <img src="/assets/img/{{ page.cover | downcase }}" alt="" class="project-cover-img">
+        {%- endif -%}
+      </div>
+      <div class="col-12-sm col-6 project-details">
+        {%- if page.company -%}
+          <span class="heading-2">@{{ page.company | downcase }}</span>
+        {%- endif -%}
+        <h1 class="heading-1" itemprop="name headline">{{ page.title | escape }}</h1>
+        {%- if page.lead -%}
+          <p>{{ page.lead | escape }}</p>
+        {%- endif -%}
+        <ul class="project-meta">
+          {%- if page.company -%}
+          <li>
+            <span class="project-meta-label">company</span>
+            <span>{{ page.company | escape }}</span>
+          </li>
+          {%- endif -%}
+          {%- if page.role -%}
+          <li>
+            <span class="project-meta-label">role</span>
+            <span>{{ page.role | escape }}</span>
+          </li>
+          {%- endif -%}
+          {%- if page.project_date -%}
+          <li>
+            <span class="project-meta-label">date</span>
+            <span>{{ page.project_date | escape }}</span>
+          </li>
+          {%- endif -%}
+        </ul>
+      </div>
+    </header>
+
+    <div class="post-content e-content" itemprop="articleBody">
+      {{ content }}
+    </div>
+
+    {%- if site.disqus.shortname -%}
+      {%- include disqus_comments.html -%}
+    {%- endif -%}
+
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  </article>
+</div>

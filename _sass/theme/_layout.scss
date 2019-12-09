@@ -1,0 +1,439 @@
+/**
+ * Site header
+ */
+.site-header {
+  border-top: 5px solid $grey-color-dark;
+  border-bottom: 1px solid $grey-color-light;
+  min-height: $spacing-unit * 1.865;
+
+  // Positioning context for the mobile navigation icon
+  position: relative;
+}
+.header{
+  position: fixed;
+  margin-top: 1rem;
+  @include flexbox;
+  @include flex-direction(column);
+  width: 100%;
+  @include media-query($on-laptop) {
+    margin-top: 2rem;
+  }
+}
+.main-nav{
+  margin-top: 2rem;
+  float: left;
+  @include flexbox;
+  @include flex-direction(column);
+
+  .page-link {
+    color: $text-color;
+    font-size: 1.33rem;
+    font-weight: $bold-font-weight;
+    line-height: $base-line-height;
+    display: inline-block;
+    text-transform: lowercase;
+    margin-bottom: 8px;
+  }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: $bold-font-weight;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-bottom: 0;
+  float: left;
+}
+
+.title-nav{
+  width: 100%;
+  @include flexbox;
+  @include flex-direction(row);
+  @include justify-content(space-between);
+}
+
+
+
+$menu-bg: #DE4152;
+$menu-color: #ffffff;
+$menu-font-size: 2.5rem;
+$menu-zindex: 1100;
+$hamburger-color: #000;
+$hamburger-width: 50px;
+$hamburger-height: 50px;
+$hamburger-zindex: $menu-zindex + 10;
+
+
+#menu {
+  @include media-query-rev($on-laptop) {
+    background: $background-color;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    transition: all 0.7s ease-in-out;
+    // For some sweet fadez
+    visibility: hidden;
+    width: 100%;
+    z-index: $menu-zindex;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+
+      @for $i from 1 through 10 {
+        li:nth-child(#{$i}) {
+          animation-delay: $i*0.1s;
+        }
+      }
+
+      li {
+        animation-duration: 1.0s;
+        animation-fill-mode: both;
+        animation-name: fadeInUp;
+      }
+    }
+
+    ul {
+      &:hover {
+        a {
+          opacity: 0.5;
+        }
+      }
+
+      a {
+        // Stops it being a twitchy mess in chrome :pray:
+        // https://www.binarymoon.co.uk/2014/02/fixing-css-transitions-in-google-chrome/
+        -webkit-transform: translateZ(0);
+        transition: opacity 0.3s ease-in-out;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .main-nav {
+      width: 100%;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        color: $text-color;
+        display: block;
+        padding: 0.5rem 0.5rem;
+        text-align: center;
+        &:first {
+          padding-top: 0;
+        }
+      }
+    }
+
+    .menu-footer {
+      padding: 2rem;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+
+      ul {
+        display: inline-block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: inline;
+          margin: 0 1rem;
+        }
+      }
+
+      a {
+        color: $text-color;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+}
+
+
+// Hamburger menu toggler stuff below
+.toggle-menu {
+  display: none;
+  @include media-query-rev($on-laptop) {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    //height: 18px;
+    outline: none;
+    padding: 0;
+    pointer-events: initial;
+    position: relative;
+    vertical-align: middle;
+    //width: 18px;
+    z-index: $hamburger-zindex;
+
+    span {
+      background-color: $hamburger-color;
+      content: "";
+      display: block;
+      height: 3px;
+      left: calc(50% - 13px );
+      position: absolute;
+      top: calc(50% - 1px );
+      transform-origin: 50% 50%;
+      transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,  transform 0.2s linear;
+      width: 32px;
+
+      &:before, &:after {
+        background-color: $brand-color;
+        content: "";
+        display: block;
+        height: 3px;
+        position: absolute;
+        transform-origin: 50% 50%;
+        transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,  transform 0.2s linear;
+        width: 32px;
+      }
+
+      &:before {
+        top: 9px;
+      }
+
+      &:after {
+        top: -9px;
+      }
+    }
+
+    &.active {
+      span {
+        background-color: transparent;
+        transition: background 0.2s ease-out;
+
+        &:before, &:after {
+          transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
+        }
+
+        &:before {
+          top: 0;
+          transform: rotate3d(0, 0, 1, -45deg);
+        }
+
+        &:after {
+          top: 0;
+          transform: rotate3d(0, 0, 1, 45deg);
+        }
+      }
+    }
+  }
+}
+
+
+.home-content{
+  margin-top: 30vh;
+  @include media-query($on-laptop) {
+    margin-top: 40vh;
+  }
+}
+
+/**
+ * Site footer
+ */
+.footer{
+   position: fixed;
+   bottom: 2rem;
+   margin-top: 100%;
+}
+.download-cv-button{
+  font-weight: $bold-font-weight;
+}
+
+
+/**
+ * Page content
+ */
+
+.side-wrapper{
+  margin-top: 10vh;
+  @include media-query($on-laptop) {
+    margin-top: 10vh;
+    margin-left: 18rem;
+  }
+}
+
+.page-content {
+  padding: $spacing-unit 0;
+  flex: 1;
+}
+
+.page-heading {
+  @include relative-font-size(2);
+}
+
+.post-list-heading {
+  @include relative-font-size(1.75);
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+}
+
+.post-meta {
+  font-size: $base-font-size;
+  color: $text-color;
+}
+
+
+
+
+.portfolio-link {
+  @include flexbox;
+  @include align-items(center);
+  width: 700px;
+}
+.portfolio-cover-img{
+  display: block;
+  max-height: 20vh;
+  width: auto;
+  margin: auto;
+  @include media-query($on-laptop) {
+    max-height: 60vh;
+  }
+}
+.portfolio-link-info{
+  margin-left: 0rem;
+  max-width: 500px;
+  margin-left: 2rem;
+  p{
+    font-weight: $base-font-weight;
+  }
+}
+
+
+
+
+/**
+ * Posts
+ */
+.project{
+  margin-bottom: 4rem;
+  @include media-query($on-laptop) {
+    margin-bottom: 8rem;
+  }
+  h1{
+    margin-bottom: 36px;
+  }
+  h2{
+    font-weight: $bold-font-weight;
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    margin-top: 48px;
+    @include media-query($on-laptop) {
+      font-size: 2rem;
+      margin-bottom: 36px;
+      margin-top: 84px;
+    }
+  }
+  p{
+    margin-bottom: 2rem;
+  }
+}
+
+.project-img{
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.project-img-extra{
+  @include media-query($on-laptop) {
+    max-width: 130%;
+    position: relative;
+    left: -15%;
+    margin: 0 auto 4rem auto;
+  }
+
+}
+
+.project-img-alt{
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.project-header{
+  @include media-query($on-laptop) {
+    margin-bottom: 10rem;
+  }
+}
+.project-details{
+  padding-top: 2rem;
+  @include media-query($on-laptop) {
+    padding-top: 10rem;
+  }
+}
+.project-meta{
+  box-sizing: border-box;
+  padding: 1rem 0 1rem 2rem;
+  margin-top: 2rem;
+  border-left: 1px solid $brand-color;
+  list-style: none;
+  margin-left: 0;
+}
+.project-meta-label{
+  opacity: 0.6;
+  width: 6rem;
+  display: inline-block;
+}
+
+
+.project-cover-img{
+  display: block;
+  max-height: 50vh;
+  width: auto;
+  margin: auto;
+  @include media-query($on-laptop) {
+    max-height: 90vh;
+  }
+}
+
+
+
+
+
+//experience
+.experience-element{
+  margin-bottom: 6rem;
+}
+.experience-date{
+  font-weight: $light-font-weight;
+  font-size: 2rem;
+}
+.experience-role, .experience-company{
+  font-weight: $bold-font-weight;
+}
+.experience-role{
+  font-size: 1.33rem;
+  margin-bottom: 1rem;
+}
+.experience-company{
+  //font-size: 1rem;
+}
+.experience-description{
+  font-weight: 300;
+}

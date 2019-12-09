@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="container">
+        {{ content }}
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script>
+      $('.toggle-menu').click (function(){
+      $(this).toggleClass('active');
+      $('#menu').toggleClass('open');
+      });
+
+  </script>
+
+</html>
