@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-09T10:35:36+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">zofia rusinowska</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">the commenting app</title><link href="http://localhost:4000/2019/12/05/the-commenting-app.html" rel="alternate" type="text/html" title="the commenting app" /><published>2019-12-05T00:00:00+01:00</published><updated>2019-12-05T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/05/the-commenting-app</id><content type="html" xml:base="http://localhost:4000/2019/12/05/the-commenting-app.html">&lt;h2 id=&quot;challenge&quot;&gt;challenge&lt;/h2&gt;
+
+&lt;p&gt;Communication team needed a way to engage their employees to interact with the posted content. Not only using comments but also by rating and sharing more. In addition, the solution had to be easily adaptable to the company’s future content platforms.&lt;/p&gt;
+
+&lt;h2 id=&quot;results&quot;&gt;results&lt;/h2&gt;
+
+&lt;p&gt;As a result, the development team delivered their commenting plugin that sparked more engagement than previous ones. A solution tailored to the needs discovered during user research. What is more, user research allowed the team to &lt;strong&gt;redefine the goal&lt;/strong&gt; – and, in the end, cut the scope and development time. ABB employees can now use effective, fast ways to react to ABB content posted on the intranet.&lt;/p&gt;
+
+&lt;h2 id=&quot;process-and-work&quot;&gt;process and work&lt;/h2&gt;
+
+&lt;p&gt;In-depth user experience research to learn users habits. Crafting personas to bring users close to the development team. Fast, interactive prototyping to verify designed solutions and interaction metaphors.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;project-img-extra&quot; src=&quot;/assets/img/the-commenting-app/process.png&quot; alt=&quot;Process diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;research&quot;&gt;research&lt;/h2&gt;
+
+&lt;p&gt;I analysed the last five years of users behaviour and responses towards posted content. Benchmarks, interviews and creating personas allowed us to realise that our main goal isn’t making people comment more. Instead, the challenge was to let them interact in an easier way (like giving likes and dislikes). Our goal changed from a bigger number of comments to a bigger number of interactions.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;project-img&quot; src=&quot;/assets/img/the-commenting-app/benchmark.png&quot; alt=&quot;Screenshot from the benchmark&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;project-img-alt&quot;&gt;Part of the analyse for the benchmark.&lt;/p&gt;
+
+&lt;h2 id=&quot;ideation--prototyping&quot;&gt;ideation / prototyping&lt;/h2&gt;
+
+&lt;p&gt;I’ve started the ideation phase by creating many rapid paper prototypes / low-fidelity wireframes. It allowed me to start broad and come up with many variations. Then I moved my ideas to the Sketch and created many artboards. Designing UI for the plugin was an iterative process that included many consultations with the development team and other designers.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;project-img-extra&quot; src=&quot;/assets/img/the-commenting-app/designs.jpg&quot; alt=&quot;Screenshot from the benchmark&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;validation&quot;&gt;validation&lt;/h2&gt;
+
+&lt;p&gt;The prototype of the new solution was tested locally using corridor testing method. It allowed picking up UI bugs and instant adjusting the prototype.&lt;/p&gt;</content><author><name></name></author><summary type="html">challenge</summary></entry><entry><title type="html">the timesheet app</title><link href="http://localhost:4000/2019/12/05/the-timesheet-app.html" rel="alternate" type="text/html" title="the timesheet app" /><published>2019-12-05T00:00:00+01:00</published><updated>2019-12-05T00:00:00+01:00</updated><id>http://localhost:4000/2019/12/05/the-timesheet-app</id><content type="html" xml:base="http://localhost:4000/2019/12/05/the-timesheet-app.html">&lt;h2 id=&quot;challenge&quot;&gt;challenge&lt;/h2&gt;
+
+&lt;p&gt;Work of all employees needs to be recorded and assigned to appropriate projects. The previous solution had really bad fame because of its bad usability and process full of repetitive tasks. We faced the challenge to simplify the process and design a new app that won’t be the new employees’ nightmare. We aimed to design an app that will allow the controlling team to efficiently manage the whole process and minimise tasks for regular employees.&lt;/p&gt;
+
+&lt;h2 id=&quot;results&quot;&gt;results&lt;/h2&gt;
+
+&lt;p&gt;As a result, we created the solution that &lt;strong&gt;suits users needs&lt;/strong&gt; and it’s a great help in communication with future vendor.&lt;/p&gt;
+
+&lt;h2 id=&quot;process-and-work&quot;&gt;process and work&lt;/h2&gt;
+
+&lt;p&gt;In-depth user experience research to learn users habits. Crafting personas to bring users close to the development team. Fast, interactive prototyping to verify designed solutions and interaction metaphors.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;project-img-extra&quot; src=&quot;/assets/img/the-timesheet-app/process.png&quot; alt=&quot;Process diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;research&quot;&gt;research&lt;/h2&gt;
+
+&lt;p&gt;We started the research with planning the interviews. We’ve created the interview scenario focused on work/time recording process but it also included profiling questions and questions regarding daily routine at work.&lt;/p&gt;
+
+&lt;p&gt;In one week we’ve interviewed 15 people – representatives of 3 roles: regular employees, managers and controlling team members. Surprisingly people were complaining about the process, not about the app.&lt;/p&gt;
+
+&lt;p&gt;We’ve realised that to get the whole picture we need to really understand the process. That’s why we used the service blueprint technique to create the visualisation of the process.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;project-img-extra&quot; src=&quot;/assets/img/the-timesheet-app/service-blueprint.png&quot; alt=&quot;Service Blueprint&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;project-img-alt&quot;&gt;Service Blueprint of the process.(It was rather complex.)&lt;/p&gt;
+
+&lt;h2 id=&quot;ideation--prototyping&quot;&gt;ideation / prototyping&lt;/h2&gt;
+
+&lt;p&gt;I’ve started the ideation phase by creating many rapid paper prototypes / low-fidelity wireframes. It allowed me to start broad and come up with many variations. Then I moved my ideas to the Sketch and created many artboards. Designing UI for the plugin was an iterative process that included many consultations with the development team and other designers.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;project-img-extra&quot; src=&quot;/assets/img/the-commenting-app/designs.jpg&quot; alt=&quot;Screenshot from the benchmark&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;validation&quot;&gt;validation&lt;/h2&gt;
+
+&lt;p&gt;The prototype of the new solution was tested locally using corridor testing method. It allowed picking up UI bugs and instant adjusting the prototype.&lt;/p&gt;</content><author><name></name></author><summary type="html">challenge</summary></entry></feed>
